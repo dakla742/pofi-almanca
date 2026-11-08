@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pofi'yle Almanca: der Apfel</title>
+<style>
+:root{--bg:#f4efe6;--ink:#2a2118;--muted:#6f6455;--btn:#2b5fd9;--btnt:#fff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14110d;--ink:#f1e8d8;--muted:#a89c89}}
+:root[data-theme="dark"]{--bg:#14110d;--ink:#f1e8d8;--muted:#a89c89}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Segoe UI",system-ui,sans-serif;display:flex;flex-direction:column;align-items:center;gap:12px;padding:16px}
+h1{font-size:1.1rem;margin:4px 0 0}
+p{margin:0;color:var(--muted);font-size:.9rem}
+#stage{width:min(92vw,360px);aspect-ratio:9/16;max-height:72vh;border-radius:14px;overflow:hidden;background:#000}
+svg{width:100%;height:100%;display:block}
+.row{display:flex;gap:14px;align-items:center;flex-wrap:wrap;justify-content:center}
+button{font:inherit;font-weight:600;background:var(--btn);color:var(--btnt);border:0;border-radius:10px;padding:10px 20px;cursor:pointer}
+button:focus-visible,input:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+label{font-size:.9rem}
+</style>
+</head>
+<body>
+<h1>Pofi'yle Almanca · Gün 1 · v4 (gece)</h1>
+<div id="stage">
+<svg viewBox="0 0 360 640" aria-label="Gece mutfağında kedi, ay ışığındaki elmayı usulca masadan iter">
+<defs>
+  <filter id="gl" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="2.5"/></filter>
+  <filter id="so" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="9"/></filter>
+  <filter id="gr"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" seed="7"/><feColorMatrix values="0 0 0 0 .6 0 0 0 0 .6 0 0 0 0 .6 0 0 0 .7 0"/></filter>
+  <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#060a13"/><stop offset="1" stop-color="#152036"/></linearGradient>
+  <linearGradient id="beam" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b9d0ff" stop-opacity=".42"/><stop offset="1" stop-color="#b9d0ff" stop-opacity="0"/></linearGradient>
+  <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1c2f57"/><stop offset="1" stop-color="#3a5a98"/></linearGradient>
+  <radialGradient id="warm"><stop offset="0" stop-color="#ffb45e" stop-opacity=".75"/><stop offset="1" stop-color="#ffb45e" stop-opacity="0"/></radialGradient>
+  <radialGradient id="moon"><stop offset="0" stop-color="#fffbe8"/><stop offset=".35" stop-color="#e9efff"/><stop offset="1" stop-color="#9db8ff" stop-opacity="0"/></radialGradient>
+  <radialGradient id="app" cx=".35" cy=".35" r=".8"><stop offset="0" stop-color="#ff6a5a"/><stop offset="1" stop-color="#7a1414"/></radialGradient>
+  <radialGradient id="vig" cx=".5" cy=".5" r=".72"><stop offset=".45" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".82"/></radialGradient>
+</defs>
+
+<g id="cam">
+  <rect width="360" height="560" fill="url(#wall)"/>
+  <rect y="560" width="360" height="80" fill="#0b101a"/>
+  <path d="M0 596H360M70 560V596M210 560V596M30 596V640M150 596V640M270 596V640" stroke="#1b2740" stroke-width="2"/>
+  <rect width="360" height="64" fill="#080c15"/><path d="M90 0V64M180 0V64M270 0V64" stroke="#16203a" stroke-width="2"/>
+  <g fill="#070a12" stroke="#101a2e" stroke-width="2"><path d="M10 84H150"/><path d="M28 84v24"/><ellipse cx="28" cy="116" rx="9" ry="8"/><circle cx="68" cy="118" r="16"/><ellipse cx="110" cy="124" rx="8" ry="11"/></g>
+  <!-- window + moon -->
+  <rect x="164" y="84" width="152" height="142" rx="4" fill="#0a0f1c"/>
+  <rect x="173" y="93" width="134" height="124" fill="url(#glass)"/>
+  <circle cx="246" cy="132" r="46" fill="url(#moon)"/><circle cx="246" cy="132" r="14" fill="#fffbe8"/>
+  <g fill="#e9efff"><circle cx="190" cy="108" r="1.2"/><circle cx="214" cy="170" r="1"/><circle cx="288" cy="104" r="1.2"/><circle cx="280" cy="180" r="1"/></g>
+  <path d="M173 217v-30q20-24 34-6 18-30 40-4 22-20 38 6 12-10 22 6v28z" fill="#0a1220"/>
+  <path d="M240 93v124M173 155h134" stroke="#0a0f1c" stroke-width="6"/>
+  <rect x="158" y="226" width="164" height="8" fill="#0a0f1a"/>
+  <g fill="#050810"><rect x="284" y="208" width="22" height="18" rx="2"/><path d="M295 208q-14-14-8-28 8 8 8 28M295 208q14-14 8-28-8 8-8 28M295 208v-36" stroke="#050810" stroke-width="6" fill="none"/></g>
+  <!-- moonbeam + light pools -->
+  <polygon points="176,232 304,232 330,412 130,412" fill="url(#beam)"/>
+  <polygon points="130,412 330,412 360,560 70,560" fill="url(#beam)" opacity=".45"/>
+  <g id="motes" fill="#e9efff"></g>
+  <ellipse cx="205" cy="406" rx="84" ry="9" fill="#cfe0ff" opacity=".55" filter="url(#gl)"/>
+  <ellipse cx="150" cy="572" rx="125" ry="15" fill="#bcd3ff" opacity=".4" filter="url(#so)"/>
+  <!-- counter -->
+  <rect x="100" y="424" width="260" height="136" fill="#0b111c"/>
+  <rect x="108" y="434" width="116" height="116" rx="3" fill="none" stroke="#17233a" stroke-width="3"/><rect x="236" y="434" width="116" height="116" rx="3" fill="none" stroke="#17233a" stroke-width="3"/>
+  <rect x="96" y="408" width="268" height="16" rx="3" fill="#1f2f4d"/><rect x="96" y="408" width="268" height="3" fill="#6f93d6" opacity=".6"/>
+  <g fill="#070a12"><rect x="322" y="366" width="30" height="42" rx="4"/><rect x="319" y="360" width="36" height="8" rx="3"/><rect x="294" y="382" width="22" height="26" rx="3"/></g>
+  <path d="M0 262H360M0 284H360M0 306H360M0 328H360M0 350H360M0 372H360M0 394H360M40 240v22M80 262v22M120 284v22M160 306v22M200 328v22M240 350v22M280 372v22M320 262v22M300 284v22" stroke="#17233b" stroke-width="1.4" opacity=".8"/><rect x="108" y="196" width="48" height="4" fill="#0a0f1a"/><g fill="#0c1220" stroke="#1d2b47"><rect x="112" y="178" width="9" height="18" rx="2"/><rect x="124" y="182" width="9" height="14" rx="2"/><rect x="136" y="176" width="9" height="20" rx="2"/></g><path d="M272 408v-34q0-14 14-14h10v12" stroke="#1d2a42" stroke-width="5" fill="none" stroke-linecap="round"/><path d="M272 408v-34q0-14 14-14h10" stroke="#6f93d6" stroke-opacity=".5" stroke-width="1.2" fill="none"/><rect x="126" y="346" width="34" height="60" rx="4" fill="#141c2e" stroke="#243456" transform="rotate(-8 143 376)"/><circle cx="143" cy="356" r="3" fill="#0a0f1a" transform="rotate(-8 143 376)"/><rect x="212" y="438" width="14" height="44" rx="2" fill="#18284a"/><path d="M212 450h14M212 462h14" stroke="#2c4272" stroke-width="2"/>
+  <g id="fridge"><rect x="2" y="236" width="98" height="324" rx="4" fill="#0e1524" stroke="#ffb45e" stroke-opacity=".3" stroke-width="1.5"/><path d="M2 332H100" stroke="#1d2a46" stroke-width="2.5"/><rect x="86" y="268" width="5" height="44" rx="2" fill="#5f7399"/><rect x="86" y="346" width="5" height="64" rx="2" fill="#5f7399"/><circle cx="26" cy="292" r="5" fill="#e8574d"/><circle cx="44" cy="304" r="5" fill="#f6c85a"/><circle cx="62" cy="290" r="5" fill="#4fc0b0"/><rect x="30" y="352" width="26" height="32" fill="#d9d2bf" opacity=".4" transform="rotate(-4 43 368)"/></g><ellipse cx="40" cy="330" rx="130" ry="170" fill="url(#warm)" opacity=".6"/>
+  <path d="M28 198h28l-5 22H33z" fill="#ffcf8a"/><path d="M42 220v16" stroke="#2a1a0c" stroke-width="3"/>
+  <!-- narrator silhouette -->
+  <g id="human" transform="translate(52,560)" fill="#080a10" stroke="#ffb45e" stroke-opacity=".45" stroke-width="1.4">
+    <rect x="-17" y="-70" width="14" height="68"/><rect x="3" y="-70" width="14" height="68"/>
+    <ellipse cx="-12" cy="0" rx="14" ry="5"/><ellipse cx="12" cy="0" rx="14" ry="5"/>
+    <path id="torso" d="M-26 -132q0-12 14-12h24q14 0 14 12v66h-52z"/>
+    <g id="arm0"><rect x="-46" y="-130" width="13" height="56" rx="6" transform="rotate(6 -40 -130)"/></g>
+    <g id="hd"><rect x="-5" y="-150" width="10" height="16"/><ellipse cx="0" cy="-168" rx="20" ry="25"/><circle cx="2" cy="-198" r="10"/><path id="pony" d="M-14 -190q-26 6-22 40q4-24 22-30z"/><path d="M19 -172q7 5 1 11z"/><path d="M-19 -182q-4 14 0 28" stroke="#ffd9a0" stroke-opacity=".9" stroke-width="2" fill="none"/></g>
+    <g id="arm"><rect x="-6" y="0" width="13" height="46" rx="6"/><ellipse cx="0" cy="49" rx="6" ry="8"/></g>
+  </g>
+  <ellipse id="ash" cx="190" cy="410" rx="22" ry="4" fill="#000" opacity=".5" filter="url(#gl)"/>
+  <g id="apple">
+    <circle r="22" fill="url(#app)"/><ellipse cx="-8" cy="-9" rx="4" ry="8" fill="#fff" opacity=".45"/>
+    <path d="M0 -20q2-9 7-11" stroke="#2a1a10" stroke-width="3" fill="none" stroke-linecap="round"/><ellipse cx="10" cy="-25" rx="7" ry="3.5" fill="#3f6a2c"/>
+    <circle id="bite" cx="-14" cy="-6" r="0" fill="#15203a"/>
+  </g>
+  <!-- Pofi silhouette -->
+  <g id="cat">
+    <g fill="#0b0e15" stroke="#7da2e8" stroke-opacity=".55" stroke-width="1.3">
+      <g id="tail"><path d="M36 -30C76 -30 80 -74 54 -90" stroke="#0b0e15" stroke-opacity="1" stroke-width="10" fill="none" stroke-linecap="round"/><path d="M36 -38C72 -40 74 -76 54 -90" stroke="#7da2e8" stroke-opacity=".4" stroke-width="1.3" fill="none"/></g>
+      <ellipse cx="24" cy="-20" rx="18" ry="20"/>
+      <g id="body"><ellipse cx="4" cy="-36" rx="41" ry="27"/></g>
+      <rect x="-18" y="-24" width="12" height="24" rx="6"/><ellipse cx="-12" cy="-2" rx="11" ry="5.5"/>
+      <g id="arm2"><rect x="-6" y="0" width="12" height="36" rx="6" transform="translate(-28,-42)"/><ellipse cx="-28" cy="-4" rx="10" ry="5.5"/></g>
+      </g><g id="head"><g fill="#0b0e15" stroke="#7da2e8" stroke-opacity=".55" stroke-width="1.3"><g id="e1"><polygon points="-62,-76 -59,-104 -42,-82"/></g><g id="e2"><polygon points="-24,-76 -27,-104 -44,-82"/></g>
+      <ellipse cx="-43" cy="-61" rx="23" ry="21"/>
+    </g>
+    <g id="eyesO" filter="url(#gl)"><path d="M-59 -64q6-6 12 0q-6 5-12 0z" fill="#e6ff8a"/><path d="M-39 -64q6-6 12 0q-6 5-12 0z" fill="#e6ff8a"/></g>
+    <g id="pup" fill="#0b0e15"><ellipse id="p1" cx="-53" cy="-64" rx="1.6" ry="4"/><ellipse id="p2" cx="-33" cy="-64" rx="1.6" ry="4"/></g>
+    <g id="eyesC" opacity="0" stroke="#7da2e8" stroke-opacity=".8" stroke-width="2" stroke-linecap="round" fill="none"><path d="M-59 -64q6 4 12 0M-39 -64q6 4 12 0"/></g></g>
+  </g>
+  <text id="zzz" x="150" y="470" font-size="22" font-weight="700" fill="#bcd3ff" opacity="0">Zzz</text>
+</g>
+
+<rect width="360" height="640" fill="url(#vig)"/>
+<rect width="360" height="640" filter="url(#gr)" opacity=".09"/>
+<g id="word" opacity="0">
+  <text x="180" y="138" text-anchor="middle" font-size="52" font-weight="700" fill="#f4f1e6" filter="url(#gl)" opacity=".55"><tspan fill="#8fb2ff">der</tspan> Apfel</text>
+  <text x="180" y="138" text-anchor="middle" font-size="52" font-weight="700" fill="#f4f1e6"><tspan fill="#8fb2ff">der</tspan> Apfel</text>
+  <path d="M110 156h140" stroke="#8fb2ff" stroke-width="2" opacity=".8"/>
+  <text x="180" y="188" text-anchor="middle" font-size="26" fill="#d8d2c2">elma</text>
+  <text x="180" y="212" text-anchor="middle" font-size="13" fill="#8fa3c9">Artikel: der · Ap-fel</text>
+</g>
+<g id="intro" opacity="0"><rect width="360" height="640" fill="#000" opacity=".5"/><text x="180" y="262" text-anchor="middle" font-size="17" fill="#bcd3ff">Pofi'yle Almanca · Gün 1</text><text x="180" y="296" text-anchor="middle" font-size="22" fill="#e9e4d4">Bugünün Almanca kelimesi</text><text x="180" y="372" text-anchor="middle" font-size="58" font-weight="700" fill="#f4f1e6" filter="url(#gl)" opacity=".5"><tspan fill="#8fb2ff">der</tspan> Apfel</text><text x="180" y="372" text-anchor="middle" font-size="58" font-weight="700" fill="#f4f1e6"><tspan fill="#8fb2ff">der</tspan> Apfel</text><text x="180" y="410" text-anchor="middle" font-size="26" fill="#d8d2c2">elma</text></g><text id="tag" x="14" y="30" font-size="12" fill="#bcd3ff" opacity="0">Pofi'yle Almanca · Gün 1 · der Apfel</text><text id="cap" x="180" y="606" text-anchor="middle" font-size="18" font-weight="600" fill="#fff" stroke="#000" stroke-width="4" paint-order="stroke" stroke-linejoin="round"></text>
+<rect id="bar" x="0" y="0" width="0" height="3" fill="#8fb2ff"/>
+</svg>
+</div>
+<div class="row">
+  <button id="replay">Baştan oynat</button>
+  <label><input type="checkbox" id="snd"> Sesli önizleme</label>
+</div>
+<p>33 saniye · Shorts (9:16) · kamera kesmeli</p>
+
+<script>
+const $=id=>document.getElementById(id);
+const L=(t,a,b,v0,v1)=>t<=a?v0:t>=b?v1:v0+(v1-v0)*(t-a)/(b-a);
+const LE=(t,a,b,v0,v1)=>{const u=L(t,a,b,0,1);return v0+(v1-v0)*u*u*(3-2*u)};
+const DUR=30,INTRO=3.2;let R=0;
+// camera keys: [time, zoom, cx, cy]; same time twice = hard cut
+const K=[[0,1,200,330],[5,1.12,205,340],[5,1.12,205,340],[9,1.3,235,380],[9,2.7,215,350],[12.6,2.9,215,355],[12.6,1.5,150,420],[14,1.5,140,470],[14,1.4,130,500],[17.8,1.3,150,490],[17.8,1.2,150,470],[22,1.25,150,480],[22,1.9,140,525],[25,1.9,140,525],[25,1.2,150,490],[30,1.05,160,480]];
+const caps=[[1,"Gece yarısı. Mutfak sessiz."],[5,"Pofi aç. Hem de çok aç."],[9.2,"Ve elma... tam karşısında."],[13.6,"Pofi'nin bununla hiçbir ilgisi yok."],[17.8,"Peki elmaya Almancada ne denir?"],[20.8,"der Apfel"],[23.2,"Bir daha dinle:"],[25,"der Apfel"],[27.2,"Yarın görüşürüz."]];
+const lines=[[1,"Gece yarısı. Mutfak sessiz.","tr-TR",3.2],[5,"Pofi aç. Hem de çok aç.","tr-TR",3],[9.2,"Ve elma... tam karşısında.","tr-TR",2.6],[13.6,"Pofi'nin bununla hiçbir ilgisi yok.","tr-TR",3],[17.8,"Peki elmaya Almancada ne denir?","tr-TR",2.8],[20.8,"Der Apfel.","de-DE",1.8],[23.2,"Bir daha dinle.","tr-TR",1.5],[25,"Der Apfel.","de-DE",1.8],[27.2,"Yarın görüşürüz.","tr-TR",2.2]];
+let start=0,fired=[];
+const M=$("motes");for(let i=0;i<10;i++){const c=document.createElementNS("http://www.w3.org/2000/svg","circle");c.setAttribute("r",1.1+i%3*.5);M.appendChild(c);}
+function say(txt,lang){try{if(!$("snd").checked||!window.speechSynthesis)return;const u=new SpeechSynthesisUtterance(txt);u.lang=lang;u.rate=.8;speechSynthesis.speak(u);}catch(e){}}
+function intro(r){const on=r<INTRO;$("intro").setAttribute("opacity",on?L(r,0,.4,0,1)*L(r,2.7,3.2,1,0):0);$("tag").setAttribute("opacity",on?0:.8);if(on)$("cap").textContent="Bugün Almancada yeni bir kelime öğreniyoruz.";$("bar").setAttribute("width",360*r/(DUR+INTRO));}
+function cam(t){
+  let z=1,cx=200,cy=330;
+  for(let i=0;i<K.length-1;i++){const a=K[i],b=K[i+1];if(t>=a[0]&&t<b[0]){const u=(t-a[0])/(b[0]-a[0]);z=a[1]+(b[1]-a[1])*u;cx=a[2]+(b[2]-a[2])*u;cy=a[3]+(b[3]-a[3])*u;break;}}
+  $("cam").setAttribute("transform","translate("+(180-z*cx)+","+(320-z*cy)+") scale("+z+")");
+}
+function frame(t){
+  cam(t);
+  // cat movement
+  let x=340,y=410;
+  if(t>=4&&t<8.5){x=LE(t,4,8.5,340,246);y=410+Math.sin(t*3)*1.5;}
+  else if(t>=8.5&&t<16.2){x=246;}
+  else if(t>=16.2&&t<17.8){const u=L(t,16.2,17.8,0,1);x=LE(t,16.2,17.8,246,192);y=410+150*(u*u*(3-2*u))-Math.sin(Math.PI*u)*40;}
+  else if(t>=17.8){x=192;y=560;}
+  const crouch=(t>=4&&t<9)?.9:1;
+  let sq=1;if(t>=25.5)sq=LE(t,25.5,26.5,1,.9);
+  $("cat").setAttribute("transform","translate("+x+","+y+") scale(1,"+(crouch*sq)+")");
+  // paw
+  let a=0;
+  if(t>=11.2&&t<12.4)a=LE(t,11.2,12.4,0,60);else if(t>=12.4&&t<12.6)a=LE(t,12.4,12.6,60,105);else if(t>=12.6&&t<13.4)a=LE(t,12.6,13.4,105,0);
+  $("arm2").setAttribute("transform","rotate("+a+" -28 -42)");
+  // eyes
+  const appear=L(t,2,2.8,0,1);
+  const closed=(t>=22.4&&t<23.2)||(t>=25.5&&!(t>=28.5&&t<29.3))||(t>3&&t<22&&t%3.7>3.58);
+  $("eyesO").setAttribute("opacity",closed?0:appear);$("pup").setAttribute("opacity",closed?0:appear);
+  $("eyesC").setAttribute("opacity",closed&&t>=22?1:0);
+  const px=t>=11.2&&t<13.2?L(t,11.2,11.8,0,3.2):(t<9.4?-0.5:-2);
+  $("p1").setAttribute("cx",-53+px);$("p2").setAttribute("cx",-33+px);
+  const bs=t>=22.5?LE(t,22.5,28,1,1.28):1;
+  $("body").setAttribute("transform","translate(4,-36) scale("+bs+","+(bs*(1+Math.sin(t*2.4)*.025))+") translate(-4,36)");
+  const hb=Math.sin(t*(t<9?5:1.7))*(t<9?1.5:.8);
+  $("head").setAttribute("transform","translate(0,"+hb+") rotate("+(Math.sin(t*1.1)*1.5+(t>=13.4&&t<14.6?-6:0))+" -43 -50)");
+  const tw=Math.max(0,Math.sin(t*2.3)-.85)*60;
+  $("e1").setAttribute("transform","rotate("+(-tw)+" -52 -82)");$("e2").setAttribute("transform","rotate("+(tw*.6)+" -34 -82)");
+  $("tail").setAttribute("transform","rotate("+Math.sin(t*1.6)*(t<9?4:9)+" 36 -30)");
+  // apple
+  let ax=190,ay=388,ar=0,rest=1;
+  if(t>=12.6&&t<14){ax=LE(t,12.6,14,190,118);ar=(ax-190)*4;rest=0;}
+  else if(t>=14&&t<15){ax=LE(t,14,15,118,112);ay=LE(t,14,15,388,538);ar=-290;rest=0;}
+  else if(t>=15&&t<16){ax=112;ay=538-Math.abs(Math.sin((t-15)*Math.PI))*22;ar=-290;rest=0;}
+  else if(t>=16){ax=114;ay=538;ar=-290;}
+  $("apple").setAttribute("transform","translate("+ax+","+ay+") rotate("+ar+")");
+  $("apple").style.opacity=t>=25?L(t,25,25.6,1,0):1;
+  $("ash").setAttribute("cx",ax);$("ash").setAttribute("cy",ay>400?560:410);$("ash").setAttribute("opacity",rest&&t<25?.5:0);
+  $("bite").setAttribute("r",t<22.2?0:L(t,22.2,22.8,0,14));
+  // narrator
+  let sp=0;for(const l of lines)if(t>=l[0]&&t<l[0]+l[3])sp=1;
+  if(R>=.4&&R<INTRO)sp=1;
+  const lean=(t>=12.6&&t<14.5)?-7:0;
+  $("hd").setAttribute("transform","rotate("+(lean+(sp?Math.sin(t*6)*2:Math.sin(t*.9)*1.2)+(t>=23&&t<25.5?Math.sin(t*16)*4:0))+" 0 -150)");
+  $("pony").setAttribute("transform","rotate("+(Math.sin(t*2.2)*7+lean)+" -14 -188)");
+  $("torso").setAttribute("transform","translate(0,-66) scale(1,"+(1+Math.sin(t*2)*.012)+") translate(0,66)");
+  $("arm0").setAttribute("transform","rotate("+(sp?Math.sin(t*4)*6:Math.sin(t*1.1)*2)+" -40 -130)");
+  $("arm").setAttribute("transform","translate(22,-126) rotate("+((t>=13.2&&t<14.8)?-150:(sp?-28+Math.sin(t*3)*9:(t>=18&&t<27?-60:3+Math.sin(t*1.2)*2)))+")");
+  // motes
+  [...M.children].forEach((c,i)=>{c.setAttribute("cx",150+((i*37)%140)+Math.sin(t*.6+i)*6);c.setAttribute("cy",240+((i*53+t*7)%170));c.setAttribute("opacity",.35+.3*Math.sin(t+i));});
+  // card, zzz, caption, bar
+  $("word").setAttribute("opacity",L(t,18.2,19.2,0,1)*(t>=28?L(t,28,29,1,0):1));
+  $("zzz").setAttribute("opacity",t>=26?.5+Math.sin(t*2)*.3:0);
+  $("zzz").setAttribute("transform","translate(0,"+(-Math.sin(t*2)*5)+")");
+  let c="";for(const k of caps)if(t>=k[0])c=k[1];
+  $("cap").textContent=c;
+  $("bar").setAttribute("width",360*t/DUR);
+}
+function loop(now){
+  const r=(now-start)/1000,t=Math.max(0,r-INTRO);R=r;
+  if(t>=DUR){frame(DUR-.01);intro(r);return;}
+  frame(t);intro(r);if(!fired.i&&r>=.4){fired.i=1;say("Merhaba! Bugün Almancada yeni bir kelime öğreniyoruz.","tr-TR");}
+  lines.forEach((l,i)=>{if(!fired[i]&&t>=l[0]){fired[i]=1;say(l[1],l[2]);}});
+  requestAnimationFrame(loop);
+}
+function play(){try{speechSynthesis.cancel();}catch(e){}fired=[];start=performance.now();requestAnimationFrame(loop);}
+$("replay").onclick=play;
+window.renderAt=function(r){R=r;const t=Math.max(0,r-INTRO);frame(Math.min(t,DUR-.01));intro(r);};
+if(location.search.indexOf("render")<0)play();
+</script>
+</body>
+</html>
