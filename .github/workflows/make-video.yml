@@ -12,6 +12,7 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install edge-tts playwright
+      - run: sudo apt-get update && sudo apt-get install -y ffmpeg
       - run: playwright install --with-deps chromium
       - run: python make_voice.py
       - run: python render_frames.py
